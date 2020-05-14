@@ -13,10 +13,10 @@ if not os.path.isdir(output_folder):
     os.makedirs(output_folder)
 
     # loop through pokedex,
-    for image_file in os.listdir(image_folder):
-        outfile = Image.open(f'{image_folder}{image_file}')
+    for filename in os.listdir(image_folder):
+        outfile = Image.open(f'{image_folder}{filename}')
         # split filename from the extension and keep the filename
-        clean_name = os.path.splitext(image_file)[0]
+        clean_name = os.path.splitext(filename)[0]
         # save images to the new folder
         # convert images to png
         # save images to the new folder
